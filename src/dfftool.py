@@ -1,9 +1,9 @@
 import pandas as pd
 
-importFilePath = r'dffTool/import/'
+importFilePath = r'DiffTool/import/'
 importFileName1 = r'Trends_in_deaths1.csv'
 importFileName2 = r'Trends_in_deaths2.csv'
-exportFilePath = r'dffTool/export/'
+exportFilePath = r'DiffTool/export/'
 exportFileName = r'data_result.csv'
 
 def readFile():
@@ -58,7 +58,8 @@ def check_diff():
                 continue
             else:
                 df_deathRate_output = df_deathRate_output.append(seri)
-            
+                df_deathRate_output = df_deathRate_output.append(df_deathRate2_sorted_r.loc[idx])
+
     print("check_diff completed")
 
 def output():
