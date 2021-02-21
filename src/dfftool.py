@@ -20,6 +20,13 @@ def readFile():
     df_deathRate1 = pd.read_csv(importFilePath + importFileName1)
     df_deathRate2 = pd.read_csv(importFilePath + importFileName2)
 
+    count_row_df1 = len(df_deathRate1)
+    count_row_df2 = len(df_deathRate2)
+
+    if count_row_df1 != count_row_df2:
+        print("Both files row count are not equals")
+        exit()
+
     # ソート
     df_deathRate1_sorted = df_deathRate1.sort_values('Year')
     df_deathRate2_sorted = df_deathRate2.sort_values('Year')
@@ -59,6 +66,11 @@ def check_diff():
             else:
                 df_deathRate_output = df_deathRate_output.append(seri)
                 df_deathRate_output = df_deathRate_output.append(df_deathRate2_sorted_r.loc[idx])
+
+    count_row_df_output = len(df_deathRate_output)
+
+    if count_row_df_output is 0:
+        print("no difference is in both file")
 
     print("check_diff completed")
 
