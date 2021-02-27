@@ -1,18 +1,15 @@
+import pandas as pd
+
 class readFileClass():
 
-#    def __init__(self, filepath, filename):
-#        self.filepath = filepath
-#        self.filename = filename
+    df_out = pd.DataFrame()
 
-    def setParameter(self, filepath, filename):
+    def setPara(self, filepath, filename):
         self.filepath = filepath
         self.filename = filename
 
     def readFile(self):
 
-        import pandas as pd
-
         # CSVファイルを読み込み
-        df = pd.read_csv(self.filepath + self.filename)
-
-        return df
+        df_out = pd.read_csv(self.filepath + self.filename)
+        return df_out
