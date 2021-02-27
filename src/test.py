@@ -1,11 +1,13 @@
-from module import readFileClass
+from module import myModules
 
 filepath = r'DiffTool/import/'
 filename = r'Trends_in_deaths1.csv'
 
 if __name__ == '__main__':
 
-    readfile_1 = readFileClass.readFileClass(filepath, filename)
+    readfile_1 = myModules.readFileClass()
+
+    readfile_1.setParameter(filepath, filename)
 
     df = readfile_1.readFile()
 
