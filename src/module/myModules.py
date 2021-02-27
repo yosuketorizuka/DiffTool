@@ -14,7 +14,7 @@ class readFileClass():
         df_in = pd.read_csv(self.filepath + self.filename)
         return df_in
 
-class wrireFileClass():
+class writeFileClass():
 
     df_out = pd.DataFrame()
 
