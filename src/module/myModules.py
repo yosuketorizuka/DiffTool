@@ -24,5 +24,4 @@ class wrireFileClass():
         self.df_out = df_out
 
     def writeFile(self):
-
         self.df_out.to_csv(self.filepath + self.filename, index=False)
