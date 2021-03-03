@@ -7,10 +7,6 @@ importFileName2 = r'Trends_in_deaths2.csv'
 exportFilePath = r'DiffTool/export/'
 exportFileName = r'data_result.csv'
 
-#df_in_1 = pd.DataFrame()
-#df_in_2 = pd.DataFrame()
-#df_out = pd.DataFrame()
-
 dfCol = []
 numCol = 0
 
