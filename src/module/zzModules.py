@@ -23,5 +23,23 @@ class writeFileClass():
         self.filename = filename
         self.df_out = df_out
 
+    # CSVファイルへ書き出し
     def writeFile(self):
         self.df_out.to_csv(self.filepath + self.filename, index=False)
+
+class getColClass():
+
+    df_in = pd.DataFrame()
+    dfCol = []
+
+    def setPara(self, df_in):
+        self.df_in = df_in
+
+    def getCol(self):
+        
+        numCol = len(self.df_in.columns)
+
+        for i in range(numCol):
+            self.dfCol.append(self.df_in.columns.values[i])
+
+        return self.dfCol

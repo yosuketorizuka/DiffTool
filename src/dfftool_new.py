@@ -1,5 +1,5 @@
 import pandas as pd
-from module import myModules
+from module import zzModules
 
 importFilePath = r'DiffTool/import/'
 importFileName1 = r'Trends_in_deaths1.csv'
@@ -15,11 +15,11 @@ def getData():
     global df_in_1
     global df_in_2
 
-    readFile_1 = myModules.readFileClass()
+    readFile_1 = zzModules.readFileClass()
     readFile_1.setPara(importFilePath, importFileName1)
     df_in_1 = readFile_1.readFile()
 
-    readFile_2 = myModules.readFileClass()
+    readFile_2 = zzModules.readFileClass()
     readFile_2.setPara(importFilePath, importFileName2)
     df_in_2 = readFile_2.readFile()
 
@@ -53,7 +53,7 @@ def difFile():
 
 def outData():
 
-    writeFile = myModules.writeFileClass()
+    writeFile = zzModules.writeFileClass()
     writeFile.setPara(exportFilePath, exportFileName, df_out)
     writeFile.writeFile()
 
